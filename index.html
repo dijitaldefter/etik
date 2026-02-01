@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Akademi: Bilişim Etiği ve Güvenlik</title>
+    <style>
+        :root {
+            --primary: #1a237e; --secondary: #0d47a1; --accent: #00bcd4;
+            --text: #37474f; --bg: #f5f7fa; --white: #ffffff;
+            --success: #2e7d32; --danger: #c62828; --warning: #ef6c00;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 50px 20px; text-align: center; border-radius: 0 0 40px 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        nav { position: sticky; top: 0; background: white; padding: 15px; display: flex; justify-content: center; gap: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; border-radius: 0 0 15px 15px; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 0.9rem; transition: 0.3s; padding: 5px 10px; border-radius: 5px; }
+        nav a:hover { background: var(--primary); color: white; }
+
+        .card { background: var(--white); border-radius: 15px; padding: 30px; margin-top: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
+        h2 { color: var(--primary); border-bottom: 2px solid #eceff1; padding-bottom: 10px; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+        
+        /* Akademik Detay Kutuları */
+        .academic-box { background: #e3f2fd; border-left: 5px solid var(--accent); padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .anecdote { background: #fff3e0; border-left: 5px solid var(--warning); padding: 15px; border-radius: 8px; font-style: italic; }
+        
+        /* Senaryo Alanı */
+        .scenario { background: #f9f9f9; border: 2px solid #eceff1; border-radius: 12px; padding: 20px; margin: 15px 0; }
+        .choice-btn { background: white; border: 2px solid var(--primary); padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; margin: 5px 0; display: block; width: 100%; text-align: left; }
+        .choice-btn:hover { background: var(--primary); color: white; }
+
+        /* Quiz Stili */
+        .quiz-container { background: #fff; padding: 25px; border-radius: 15px; border: 2px solid #ddd; }
+        .quiz-q { font-weight: bold; margin-bottom: 15px; display: block; color: var(--primary); }
+        .option-label { display: block; padding: 12px; border: 1px solid #eee; margin-bottom: 8px; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .option-label:hover { background: #f1f8ff; }
+        input[type="radio"] { margin-right: 10px; }
+        
+        .feedback { margin-top: 10px; padding: 10px; border-radius: 5px; display: none; font-weight: bold; }
+        .correct { background: #e8f5e9; color: var(--success); }
+        .wrong { background: #ffebee; color: var(--danger); }
+
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+        th { background: var(--primary); color: white; }
+        
+        .footer { text-align: center; padding: 40px; color: #78909c; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌐 Dijital Vatandaşlık Akademisi</h1>
+    <p>Bilişim Etiği, Güvenlik ve Geleceğin Teknolojileri Eğitim Modülü</p>
+</header>
+
+<nav>
+    <a href="#etik">ETİK & NETİKET</a>
+    <a href="#telif">TELİF HAKLARI</a>
+    <a href="#guvenlik">GÜVENLİK VS EMNİYET</a>
+    <a href="#yapayzeka">YAPAY ZEKA ETİĞİ</a>
+    <a href="#sinav">FİNAL SINAVI</a>
+</nav>
+
+<div class="container">
+    
+    <section id="etik" class="card">
+        <h2>1. Bilişim Etiği ve Netiket (İnternet Etiği)</h2>
+        <p>Bilişim etiği, bilgisayar dünyasında insanların haklarını, gizliliğini ve mülkiyetini korumak için geliştirilmiş bir değerler sistemidir. 5. sınıf düzeyinde bu, sadece "iyi çocuk olmak" değil, <strong>"Dijital Ayak İzi"</strong>mizin sorumluluğunu almaktır.</p>
+        
+        <div class="academic-box">
+            <strong>Akademik Not:</strong> 1992 yılında Computer Ethics Institute tarafından yayınlanan "Bilgisayar Etiğinin 10 Emri", günümüzdeki etik tartışmalarının temelini oluşturur. Bunlar arasında "Başkasının verilerini karıştırmayacaksın" ve "Bilgisayarı yalan haber yaymak için kullanmayacaksın" gibi maddeler yer alır.
+        </div>
+
+        <h3>Örnek Senaryo: Anonimlik Zırhı</h3>
+        <div class="scenario">
+            <p><strong>Durum:</strong> Kerem, takma isimle girdiği bir forumda sevmediği bir arkadaşı hakkında asılsız dedikodular yazıyor. "Kimse benim olduğumu bilemez" diye düşünüyor.</p>
+            <p><strong>Gerçek:</strong> Dijital ayak izi asla tamamen silinmez. IP adresleri ve servis sağlayıcı kayıtları sayesinde Kerem'in kimliği tespit edilebilir. Bu eylem hem etik dışıdır hem de yasal olarak "Hizmet Kusuru" sayılır.</p>
+        </div>
+
+        <div class="anecdote">
+            <strong>Anekdot:</strong> 2024 yılında, bir sosyal medya fenomeninin 10 yıl önce yazdığı kaba tweetler yüzünden işini kaybettiğini biliyor muydunuz? İnternet unutmaz!
+        </div>
+    </section>
+
+    <section id="telif" class="card">
+        <h2>2. Fikri Mülkiyet ve Telif Hakları</h2>
+        <p>Bir eser (program, müzik, makale) üretildiğinde, üzerinde doğuştan gelen haklar vardır. Başkasının emeğini izinsiz kullanmak, dijital dünyada "hırsızlık" ile eşdeğerdir.</p>
+        
+        <table>
+            <tr>
+                <th>Kavram</th>
+                <th>Tanım</th>
+                <th>Etik Uygulama</th>
+            </tr>
+            <tr>
+                <td><strong>İntihal (Plagiarism)</strong></td>
+                <td>Başkasının fikrini kendi fikri gibi sunmak.</td>
+                <td>Kaynak gösterilmeli (Atıf yapılmalı).</td>
+            </tr>
+            <tr>
+                <td><strong>Korsan Yazılım</strong></td>
+                <td>Ücretli yazılımları yasa dışı yollarla kullanmak.</td>
+                <td>Lisanslı veya Ücretsiz (Open Source) yazılım tercih edilmeli.</td>
+            </tr>
+            <tr>
+                <td><strong>Fair Use (Adil Kullanım)</strong></td>
+                <td>Eğitim amaçlı küçük parçaların kullanımı.</td>
+                <td>Ticari amaç gütmeden, kısa alıntılar yapılabilir.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="guvenlik" class="card">
+        <h2>3. Dijital Güvenlik (Security) ve Dijital Emniyet (Safety)</h2>
+        <p>Akademik olarak bu iki kavramın farkını bilmek, bilinçli bir kullanıcı olmanın ilk adımıdır.</p>
+        
+        <div class="academic-box">
+            <ul>
+                <li><strong>Security (Güvenlik):</strong> Teknik önlemlerdir. Cihazınızı hackerlardan, virüslerden ve veri hırsızlığından korur. (Örn: 2FA, Antivirüs, Güçlü Parola).</li>
+                <li><strong>Safety (Emniyet):</strong> Davranışsal önlemlerdir. Sizi siber zorbalardan, dolandırıcılardan ve psikolojik zararlardan korur. (Örn: Yabancılarla konuşmamak, özel bilgi paylaşmamak).</li>
+            </ul>
+        </div>
+
+        <h3>Siber Zorbalıkla Mücadele Planı</h3>
+        <p>Zorbalığa maruz kaldığınızda şu 4 adımı uygulayın:</p>
+        <ol>
+            <li><strong>Cevap Verme:</strong> Zorba, tepki almaktan beslenir.</li>
+            <li><strong>Engelle:</strong> İletişimi derhal kesin.</li>
+            <li><strong>Kaydet:</strong> Ekran görüntülerini alın (Hukuki delil için).</li>
+            <li><strong>Paylaş:</strong> Mutlaka bir yetişkine haber verin.</li>
+        </ol>
+    </section>
+
+    <section id="yapayzeka" class="card">
+        <h2>4. Yapay Zeka Etiği: Deepfake ve Doğruluk</h2>
+        <p>2026 dünyasında yapay zeka her yerde. Ancak bu teknoloji beraberinde <strong>"Algoritmik Önyargı"</strong> ve <strong>"Dezenformasyon"</strong> risklerini getiriyor.</p>
+        
+        <div class="anecdote">
+            <strong>Uyarı:</strong> Deepfake teknolojisi ile birinin sesini veya görüntüsünü taklit etmek mümkündür. İnternette gördüğünüz her videonun "gerçek" olduğunu varsaymak artık büyük bir güvenlik açığıdır.
+        </div>
+
+        <div class="academic-box">
+            <strong>Yapay Zeka ve Ödev Etiği:</strong> Bir ödevi tamamen yapay zekaya yaptırmak, "öğrenme hakkınızı" kendi elinizle çöpe atmaktır. Yapay zeka bir *hizmetçi* değil, bir *asistan* olarak kullanılmalıdır.
+        </div>
+    </section>
+
+    <section id="sinav" class="card">
+        <h2>🏆 Ünite Değerlendirme Sınavı (10 Soru)</h2>
+        <p>Aşağıdaki soruları dikkatlice okuyup doğru seçeneği işaretleyiniz. Her soru öğrenilen konuları kapsar.</p>
+
+        <div id="quiz-area">
+            <div class="quiz-item" id="item1">
+                <span class="quiz-q">1. "İnternette kimse beni tanımıyor, istediğim gibi kaba davranabilirim" düşüncesi hangi kavrama aykırıdır?</span>
+                <label class="option-label"><input type="radio" name="q1" value="A"> A) Dijital Donanım</label>
+                <label class="option-label"><input type="radio" name="q1" value="B"> B) Netiket (İnternet Etiği)</label>
+                <label class="option-label"><input type="radio" name="q1" value="C"> C) Veri Madenciliği</label>
+                <label class="option-label"><input type="radio" name="q1" value="D"> D) İnternet Hızı</label>
+                <div class="feedback" id="ans1"></div>
+            </div>
+
+            <div class="quiz-item" id="item2">
+                <span class="quiz-q">2. Başkasının yazdığı bir makaleyi, sanki kendiniz yazmışsınız gibi ödevinizde kullanmak akademik olarak ne adlandırılır?</span>
+                <label class="option-label"><input type="radio" name="q2" value="A"> A) İntihal</label>
+                <label class="option-label"><input type="radio" name="q2" value="B"> B) Yedekleme</label>
+                <label class="option-label"><input type="radio" name="q2" value="C"> C) İnovasyon</label>
+                <label class="option-label"><input type="radio" name="q2" value="D"> D) Açık Kaynak</label>
+                <div class="feedback" id="ans2"></div>
+            </div>
+
+            <div class="quiz-item" id="item3">
+                <span class="quiz-q">3. "İki Faktörlü Doğrulama" (2FA) kullanmak hangi kavramın kapsamına girer?</span>
+                <label class="option-label"><input type="radio" name="q3" value="A"> A) Dijital Emniyet (Safety)</label>
+                <label class="option-label"><input type="radio" name="q3" value="B"> B) Dijital Güvenlik (Security)</label>
+                <label class="option-label"><input type="radio" name="q3" value="C"> C) Telif Hakkı</label>
+                <label class="option-label"><input type="radio" name="q3" value="D"> D) Yapay Zeka</label>
+                <div class="feedback" id="ans3"></div>
+            </div>
+
+            <div class="quiz-item" id="item4">
+                <span class="quiz-q">4. Siber zorbalığa maruz kalan birinin yapması gereken İLK adım nedir?</span>
+                <label class="option-label"><input type="radio" name="q4" value="A"> A) Hesabını tamamen kapatmak</label>
+                <label class="option-label"><input type="radio" name="q4" value="B"> B) Aynı kaba sözlerle karşılık vermek</label>
+                <label class="option-label"><input type="radio" name="q4" value="C"> C) İletişimi kesmek ve ekran görüntüsü alarak bir yetişkine söylemek</label>
+                <label class="option-label"><input type="radio" name="q4" value="D"> D) Bilgisayarı çöpe atmak</label>
+                <div class="feedback" id="ans4"></div>
+            </div>
+
+            <div class="quiz-item" id="item5">
+                <span class="quiz-q">5. Bir yazılımın "Creative Commons" lisansına sahip olması ne anlama gelir?</span>
+                <label class="option-label"><input type="radio" name="q5" value="A"> A) Kullanılması kesinlikle yasaktır</label>
+                <label class="option-label"><input type="radio" name="q5" value="B"> B) Ücreti ödenmeden açılamaz</label>
+                <label class="option-label"><input type="radio" name="q5" value="C"> C) Belirli kurallar çerçevesinde paylaşılabilir ve kullanılabilir</label>
+                <label class="option-label"><input type="radio" name="q5" value="D"> D) Sadece bilgisayar korsanları kullanabilir</label>
+                <div class="feedback" id="ans5"></div>
+            </div>
+
+            <div class="quiz-item" id="item6">
+                <span class="quiz-q">6. Aşağıdakilerden hangisi bir "Kişisel Veri" örneğidir ve paylaşılması risklidir?</span>
+                <label class="option-label"><input type="radio" name="q6" value="A"> A) En sevdiğim yemek</label>
+                <label class="option-label"><input type="radio" name="q6" value="B"> B) Okul numaram ve ev adresim</label>
+                <label class="option-label"><input type="radio" name="q6" value="C"> C) Tuttuğum futbol takımı</label>
+                <label class="option-label"><input type="radio" name="q6" value="D"> D) İzlediğim son film</label>
+                <div class="feedback" id="ans6"></div>
+            </div>
+
+            <div class="quiz-item" id="item7">
+                <span class="quiz-q">7. Yapay zekanın yanlış bir bilgiyi çok emin bir şekilde savunmasına ne ad verilir?</span>
+                <label class="option-label"><input type="radio" name="q7" value="A"> A) Güncelleme</label>
+                <label class="option-label"><input type="radio" name="q7" value="B"> B) Halüsinasyon (Uydurma)</label>
+                <label class="option-label"><input type="radio" name="q7" value="C"> C) Hızlı Öğrenme</label>
+                <label class="option-label"><input type="radio" name="q7" value="D"> D) Veri Tabanı</label>
+                <div class="feedback" id="ans7"></div>
+            </div>
+
+            <div class="quiz-item" id="item8">
+                <span class="quiz-q">8. Tatildeyken sosyal medyadan canlı konum paylaşmak neden tehlikelidir?</span>
+                <label class="option-label"><input type="radio" name="q8" value="A"> A) İnternet kotası biter</label>
+                <label class="option-label"><input type="radio" name="q8" value="B"> B) Telefonun şarjı çabuk biter</label>
+                <label class="option-label"><input type="radio" name="q8" value="C"> C) Evin boş olduğunu kötü niyetli kişilere duyurmuş oluruz</label>
+                <label class="option-label"><input type="radio" name="q8" value="D"> D) Fotoğraflar kalitesiz çıkar</label>
+                <div class="feedback" id="ans8"></div>
+            </div>
+
+            <div class="quiz-item" id="item9">
+                <span class="quiz-q">9. "Dijital Ayak İzi" ile ilgili hangisi doğrudur?</span>
+                <label class="option-label"><input type="radio" name="q9" value="A"> A) Sadece biz bilgisayarı açtığımızda oluşur</label>
+                <label class="option-label"><input type="radio" name="q9" value="B"> B) 24 saat sonra kendi kendine silinir</label>
+                <label class="option-label"><input type="radio" name="q9" value="C"> C) İnternette yaptığımız paylaşımların kalıcı ve izlenebilir kaydıdır</label>
+                <label class="option-label"><input type="radio" name="q9" value="D"> D) Sadece ünlüler için geçerlidir</label>
+                <div class="feedback" id="ans9"></div>
+            </div>
+
+            <div class="quiz-item" id="item10">
+                <span class="quiz-q">10. İnternette karşılaştığımız bir bilginin doğruluğunu nasıl teyit etmeliyiz?</span>
+                <label class="option-label"><input type="radio" name="q10" value="A"> A) İlk gördüğümüz kaynağa inanmalıyız</label>
+                <label class="option-label"><input type="radio" name="q10" value="B"> B) En çok beğeni alan yoruma bakmalıyız</label>
+                <label class="option-label"><input type="radio" name="q10" value="C"> C) Farklı ve güvenilir en az 3 kaynaktan kontrol etmeliyiz</label>
+                <label class="option-label"><input type="radio" name="q10" value="D"> D) Eğer görseli güzelse doğrudur</label>
+                <div class="feedback" id="ans10"></div>
+            </div>
+
+            <button class="choice-btn" style="background: var(--primary); color: white; text-align: center;" onclick="evaluateQuiz()">Sınavı Bitir ve Sonucu Gör</button>
+            <div id="final-score" style="margin-top:20px; font-size:1.2rem; font-weight:bold; text-align:center;"></div>
+        </div>
+    </section>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 Eğitim Teknolojileri Geliştirme Modülü | Bilişim Teknolojileri ve Yazılım Dersi İçin Hazırlanmıştır.</p>
+</div>
+
+<script>
+    const correctAnswers = {
+        q1: 'B', q2: 'A', q3: 'B', q4: 'C', q5: 'C',
+        q6: 'B', q7: 'B', q8: 'C', q9: 'C', q10: 'C'
+    };
+
+    function evaluateQuiz() {
+        let score = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const feedback = document.getElementById(`ans${i}`);
+            feedback.style.display = 'block';
+
+            if (selected && selected.value === correctAnswers[`q${i}`]) {
+                score++;
+                feedback.innerHTML = "✅ Doğru!";
+                feedback.className = "feedback correct";
+            } else {
+                feedback.innerHTML = "❌ Yanlış! Doğru cevap: " + correctAnswers[`q${i}`];
+                feedback.className = "feedback wrong";
+            }
+        }
+        
+        const finalDiv = document.getElementById('final-score');
+        finalDiv.innerHTML = `Sınav Tamamlandı! Toplam Puanın: ${score * 10} / 100`;
+        finalDiv.style.color = score >= 7 ? 'var(--success)' : 'var(--danger)';
+        
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>
